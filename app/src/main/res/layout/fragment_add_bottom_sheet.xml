@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddBottomSheetFragment">
+
+
+    <!-- EditText para el nombre del dispositivo -->
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Nombre del producto"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <EditText
+        android:id="@+id/editTextPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        />
+
+    <EditText
+        android:id="@+id/editTextCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Existencia"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/editTextPrecio"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@id/buttonAddDevice"
+        />
+
+    <Button
+        android:id="@+id/buttonAddDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCantidad"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
